@@ -61,7 +61,7 @@ exclude:
 
 # Enable or disable the site search
 # Supports true (default) or false
-search_enabled: true
+search_enabled: false
 search:
   # Split pages into sections that can be searched individually
   # Supports 1 - 6, default: 2
@@ -110,8 +110,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "https://github.com/just-the-docs/just-the-docs"
+  "INCDSB":
+    - "https://www.incdsb.ro/"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -139,26 +139,26 @@ liquid:
 # Footer content
 # appears at the bottom of every page's main content
 
-# Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
-footer_content: 'Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href="https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt">MIT license.</a> <a href="https://www.netlify.com/">This site is powered by Netlify.</a>'
-
-# Footer last edited timestamp
-last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
-last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
-
-# Footer "Edit this page on GitHub" link text
-gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
-gh_edit_branch: "main" # the branch that your docs is served from
-# gh_edit_source: docs # the source that your files originate from
-gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+# # Back to top link
+# back_to_top: true
+# back_to_top_text: "Back to top"
+# 
+# footer_content: 'Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href="https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt">MIT license.</a> <a href="https://www.netlify.com/">This site is powered by Netlify.</a>'
+# 
+# # Footer last edited timestamp
+# last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+# last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+# 
+# # Footer "Edit this page on GitHub" link text
+# gh_edit_link: true # show or hide edit this page link
+# gh_edit_link_text: "Edit this page on GitHub"
+# gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
+# gh_edit_branch: "main" # the branch that your docs is served from
+# # gh_edit_source: docs # the source that your files originate from
+# gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: nil
+color_scheme: incdsb
 
 callouts_level: quiet # or loud
 callouts:
@@ -185,9 +185,11 @@ callouts:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-github-metadata
+  # - jekyll-github-metadata
+  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-sitemap
+  - jekyll-scholar
 
 kramdown:
   syntax_highlighter_opts:
@@ -207,3 +209,11 @@ compress_html:
 sass:
   quiet_deps: true # https://github.com/just-the-docs/just-the-docs/issues/1541
   silence_deprecations: ['import'] # https://github.com/just-the-docs/just-the-docs/issues/1607
+
+scholar:
+  style: ./_bibliography/mdpi-incdsb.csl
+  bibliography_group_tag: h4,h5'
+  order: descending, descending
+  group_by: year
+  group_order: descending
+  

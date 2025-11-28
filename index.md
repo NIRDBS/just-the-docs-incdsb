@@ -18,7 +18,17 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 ---
 
 {: .warning }
-> This website documents the features of the current `main` branch of the Just the Docs theme. See [the CHANGELOG]({% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes.
+> This website documents the features of the current `main` branch of the Just the Docs theme. See the CHANGELOG for a list of releases, new features, and bug fixes.
+
+
+
+
+{% highlight ruby %}
+  {% raw %}
+    {% link CHANGELOG.md %} 
+  {% endraw %}
+{% endhighlight %}
+
 
 Just the Docs is a theme for generating static websites with [Jekyll]. You can write source files for your web pages using [Markdown], the [Liquid] templating language, and HTML.[^1] Jekyll builds your site by converting all files that have [front matter] to HTML. Your [Jekyll configuration] file determines which theme to use, and sets general parameters for your site, such as the URL of its home page.
 
@@ -76,6 +86,21 @@ Just the Docs is committed to fostering a welcoming community.
 
 [View our Code of Conduct](https://github.com/just-the-docs/just-the-docs/tree/main/CODE_OF_CONDUCT.md) on our GitHub repository.
 
+
+### Articole științifice ISI
+
+{% bibliography --file isi %}
+___
+
+### Articole științifice BDI
+
+{% bibliography --file bdi %}
+___
+
+### Lucrări comunicate la conferințe internaționale
+
+{% bibliography --file conferinte %}
+
 ----
 
 [^1]: The [source file for this page] uses all three markup languages.
@@ -97,3 +122,5 @@ Just the Docs is committed to fostering a welcoming community.
 [GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
 [customize]: {% link docs/customization.md %}
 [use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
+
+

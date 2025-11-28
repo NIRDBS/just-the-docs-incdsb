@@ -1,1 +1,10 @@
 // custom SCSS (or CSS) goes here
+.site-title {
+	color: $purple-300;
+}
+
+h4, h4 {
+	&.bibliography {
+		font-weight: bold !important;
+	}
+}

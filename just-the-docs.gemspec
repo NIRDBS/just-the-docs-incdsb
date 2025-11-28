@@ -1,7 +1,7 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "just-the-docs"
+  spec.name          = "just-the-docs-incdsb"
   spec.version       = "0.10.1"
   spec.authors       = ["Patrick Marsceill", "Matthew Wang"]
   spec.email         = ["patrick.marsceill@gmail.com", "matt@matthewwang.me"]
