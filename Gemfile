@@ -13,4 +13,3 @@ gem "html-proofer", "~> 5.0", :group => :development
 
 # INCDSB
 gem 'jekyll-scholar', group: :jekyll_plugins
-gem "jekyll-remote-theme"
